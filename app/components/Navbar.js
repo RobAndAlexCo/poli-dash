@@ -1,6 +1,16 @@
 var React = require('react');
 var Link = require('react-router').Link;
 
+var styles = {
+  position: {
+    float: "right"
+  },
+  block: {
+    display: "inline-block",
+    margin: "15px 15px 0 0"
+  }
+}
+
 var Navbar = React.createClass({
   render: function() {
     return(
@@ -9,9 +19,9 @@ var Navbar = React.createClass({
           <div className="navbar-header">
             <a className="navbar-brand" href="#">PoliDash</a>
           </div>
-          <ul className="nav navbar-nav">
-            <Link to='/'><li>Home</li></Link>
-            <Link to='/about'><li>About</li></Link>
+          <ul className="nav navbar-nav" style={styles.position}>
+            <Link to='/' style={styles.block}><li>Home</li></Link>
+            <Link to='/about' style={styles.block}><li>About</li></Link>
           </ul>
         </div>
       </nav>
